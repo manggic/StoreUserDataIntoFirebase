@@ -1,24 +1,33 @@
+
+
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Form from './components/form'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ButtonOne from './components/button1'
+import ButtonTwo from './components/button2'
+import {  GrClose } from "react-icons/fa";
+
+import firebase from "firebase/app";
+
+import  firebaseConfig  from './components/configure'
+import "firebase/database";
+
+firebase.initializeApp(firebaseConfig);
+
+
+
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+         <ButtonOne  />
+         <ButtonTwo />
+         <Form />
+
     </div>
   );
 }
